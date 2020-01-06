@@ -1,0 +1,20 @@
+version: '3'
+services:
+  report_generator:
+    container_name: report_generator
+    image: 
+    restart: unless-stopped
+    volumes:
+      - ~/docker_ds_poc/data:/data 
+      - ~/docker_ds_poc/report:/report
+    ports:
+      - 666:80
+  nginx_server:
+    container_name: nginx
+    image: nginx
+    restart: unless-stopped
+    volumes:
+      - ~/docker_ds_poc/report:/usr/share/nginx/html:ro
+    ports:
+      - 80:80
+
