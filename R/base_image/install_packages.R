@@ -1,0 +1,8 @@
+install.packages("plumber")
+install.packages("yaml")
+install.packages("visNetwork")
+install.packages("igraph")
+install.packages("devtools")
+library(devtools)
+install_github("mark-me/graydon.package")
+
