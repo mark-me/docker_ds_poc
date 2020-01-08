@@ -2,9 +2,8 @@
 FROM markzwart76/r_reporting
 
 # create directories
-RUN mkdir -p /home/project
-RUN mkdir -p /home/project/input_data
-RUN mkdir -p /home/prohect/output
+RUN mkdir -p /app
+RUN mkdir -p /report
 RUN mkdir -p /data
 
 ## copy files
