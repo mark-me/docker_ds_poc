@@ -6,3 +6,5 @@ install.packages("devtools")
 library(devtools)
 install_github("mark-me/graydon.package")
 
+library(graydon.package)
+install_graydon_packages()

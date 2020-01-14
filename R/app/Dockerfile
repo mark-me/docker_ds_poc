@@ -1,14 +1,15 @@
 # Base image 
-FROM markzwart76/r_reporting
+FROM markzwart76/r_graydon_reporting:1.0
 
 # create directories
-RUN mkdir -p /home/project
-RUN mkdir -p /home/project/input_data
-RUN mkdir -p /home/prohect/output
-RUN mkdir -p /data
+RUN mkdir -p /general_data
+RUN mkdir -p /customer_data
+RUN mkdir -p /config
+RUN mkdir -p /app
 
 ## copy files
-COPY main.R main.R
-COPY make_report.R make_report.R
-COPY config.yml config.yml
-COPY report.Rmd report.Rmd
+COPY *.R /app/
+COPY *.css /app/
+COPY config.yml /app/
+COPY report.RMD /app/
+
