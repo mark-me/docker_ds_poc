@@ -3,6 +3,8 @@ install.packages("yaml")
 install.packages("visNetwork")
 install.packages("igraph")
 install.packages("devtools")
+install.packages("kableExtra")
+install.packages("xlsx")
 library(devtools)
 install_github("mark-me/graydon.package")
 
