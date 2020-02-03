@@ -11,6 +11,5 @@ RUN mkdir -p /app
 
 ## Copy files
 COPY *.R /app/
-COPY *.R* /app/
-COPY entrypoint.sh /app/
+COPY *.sh /app/
 ADD risk_analysis_nl /app/risk_analysis_nl
