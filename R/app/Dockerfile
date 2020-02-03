@@ -1,14 +1,15 @@
 # Base image 
 FROM markzwart76/r_graydon_reporting:1.0
 
-# create directories
-RUN mkdir -p /general_data
-RUN mkdir -p /customer_data
+# Create data directories
+RUN mkdir -p /data/risk_analysis_nl/market
+RUN mkdir -p /data/risk_analysis_nl/customers
+RUN mkdir -p /data/risk_analysis_nl/intermediate
+
+# Create R report 'app'
 RUN mkdir -p /app
 
-## copy files
+## Copy files
 COPY *.R /app/
-COPY *.css /app/
-COPY config.yml /app/
-COPY report.RMD /app/
-
+COPY entrypoint.sh /app/
+ADD risk_analysis_nl /app/risk_analysis_nl
