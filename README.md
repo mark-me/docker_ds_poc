@@ -26,6 +26,17 @@ If we want users to be able to handle containers without being a root user use t
 and
 ```sudo usermod -aG docker $USER```
 
+## Setting up a docker registry
+
+Create or modify /etc/docker/daemon.json
+
+```{ "insecure-registries":["myregistry.example.com:5000"] }```
+Restart docker daemon
+
+```sudo service docker restart```
+
+(Setting up private registry)[https://softwaretester.info/create-private-docker-registry-with-ui/]
+
 # Clone this repository
 
 To clone this repository locally
@@ -42,7 +53,7 @@ All the relevant files are in the subdirectory R. The main outline of the direct
 ## Building a reporting base image
 
 The dockerfile to create the base image is located in the subdirectory R/base_image. Navigate to that directory on run the command:
-```docker build -t markzwart76/r_graydon_reporting:lastest -t markzwart76/r_graydon_reporting:1.0 .```
+```docker build -t markzwart76/r_graydon_reporting:latest -t markzwart76/r_graydon_reporting:1.0 .```
 This command will build two images: one with a specific version number, and one with the tag latest. 
 
 ## Developing the report app image
