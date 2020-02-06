@@ -1,0 +1,10 @@
+version: '3'
+services:
+  risk_analysis_nl:
+    container_name: nl-risk-analysis
+    image: markzwart76/risk-analysis:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ~/data/risk_analysis_nl:/data/risk_analysis_nl
+    entrypoint: /app/api_interface.R

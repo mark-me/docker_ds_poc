@@ -1,0 +1,12 @@
+version: '3'
+services:
+  develop_report:
+    image: markzwart76/r_graydon_reporting:1.0
+    environment:
+      - USER=graydon
+      - PASSWORD=graydon
+    ports:
+      - "8787:8787"
+    volumes:
+      - ~/docker_ds_poc/R/app:/home/graydon/app
+      - ~/data:/home/graydon/data
