@@ -6,11 +6,12 @@ A repository demonstrating how to use R and Python with docker.
 
 It is assumed there is a directory called data in the root with the following structure:
 
-/
-├/data
-├─/customers    - 
-├─/intermediate - 
-├─/market_nl    - 
+/ <br>
+├/data <br>
+ ├─/product_name
+   ├─/customers    - <br>
+   ├─/intermediate - <br>
+   ├─/market_nl    - <br>
 
 This data structure could be set up per product, but mapped to the same structure in the docker-compose of the product.
 

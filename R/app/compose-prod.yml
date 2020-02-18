@@ -7,4 +7,4 @@ services:
       - "80:80"
     volumes:
       - ~/data/risk_analysis_nl:/data/risk_analysis_nl
-    entrypoint: /app/api_interface.R
+    entrypoint: R -e "source('/app/api_interface.R')"
